@@ -1,8 +1,12 @@
-from flask import Flask
+import os
 import requests
+
+from flask import Flask
 from flask import request
 
-from config import APP_ID
+
+# Openweathermap API Token
+APP_ID = os.environ.get('APP_ID', '')
 
 app = Flask(__name__)
 
